@@ -1,18 +1,55 @@
- //react router
+npm init -y --> backend
+
+npm i express
+
+npm i express mongoose dotenv *optional
+
+npm i nodemon
+
+npm i dotenv
+type null > confiq.env command 
+
 npm i react-router-dom
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
 
-
-//for bootstarp slider in react
-npm install react-bootstrap bootstrap@4.6.0
-
-//for package.json
-npm init
-
-npm i express mongoose dotenv
+//material ui
+npm add @material-ui/icons @material-ui/core
 
 //google font Roboto
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
 
-//material ui
-npm add @material-ui/icons @material-ui/core
+//for bootstarp slider in react
+npm install react-bootstrap bootstrap@4.6.0
+
+//mongodb
+C:\Program Files\MongoDB\Server\5.0\data\
+"C:\Program Files\MongoDB\Server\5.0\bin\mongod.exe"
+"C:\Program Files\MongoDB\Server\5.0\bin\mongo.exe"
+show dbs
+use avishek
+
+//connect mongoDB atlas
+const DB = "mongodb+srv://avishek:abcd@123@cluster0.jf8yu.mongodb.net/mern?retryWrites=true&w=majority"
+mongoose.connect(DB, {
+   useNewUrlParser:true,
+   useCreateIndex:true,
+   useUnifiedTopology:true,
+   useFindAndModify:false 
+}).then(()=>{
+    console.log("connection successful");
+}).catch((err)=>console.log("no connection"));
+
+// for authentication of page
+const middleware=(req,res,next)=>{
+console.log("hello middleware");
+next()
+}
+
+//react router
+npm i react-router-dom
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
+
+
+
+
+
+
